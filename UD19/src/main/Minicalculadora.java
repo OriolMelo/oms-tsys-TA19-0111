@@ -156,6 +156,10 @@ public class Minicalculadora extends JFrame {
 		lblMuestra.setBounds(29, 28, 419, 48);
 		contentPane.add(lblMuestra);
 		
+		operador1=0;
+		operador2=0;
+		operacion="";
+		
 		setLocationRelativeTo(null);
 	}
 
@@ -173,7 +177,9 @@ public class Minicalculadora extends JFrame {
     
     private void addNumero(ActionEvent e) {
         JButton button = (JButton) e.getSource();
-        if(lblMuestra.getText()=="+" || lblMuestra.getText()=="-" || lblMuestra.getText()=="*" || lblMuestra.getText()=="/" || lblMuestra.getText()=="0")
+        if(lblMuestra.getText().equals("+") || lblMuestra.getText().equals("-") 
+        		|| lblMuestra.getText().equals("*") || lblMuestra.getText().equals("/") 
+        		|| lblMuestra.getText().equals("0") || lblMuestra.getText().equals("0.0"))
         	lblMuestra.setText("");
         lblMuestra.setText(lblMuestra.getText()+button.getText());
     }
@@ -246,6 +252,7 @@ public class Minicalculadora extends JFrame {
     	lblMuestra.setText("0");
     	operador1 = 0;
     	operador2 = 0;
+    	operacion = "";
     }
 
     private void operar() {
