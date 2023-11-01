@@ -103,7 +103,7 @@ public class Minicalculadora extends JFrame {
 		boton9.addActionListener(numeros);
 		contentPane.add(boton9);
 
-		botonDecimal = new JButton(",");
+		botonDecimal = new JButton(".");
 		botonDecimal.setBounds(189, 328, 79, 79);
 		botonDecimal.addActionListener(numeros);
 		contentPane.add(botonDecimal);
